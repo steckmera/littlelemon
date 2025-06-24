@@ -1,6 +1,9 @@
+import BookingForm from "../components/BookingForm"
+
+
 function BookingPage() {
   return (
-    <h1>Reserv to Little Lemon</h1>
+    <BookingForm/>
     );
 };
 
