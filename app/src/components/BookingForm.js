@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import AvailableTimes from './AvailableTimes'; // Usa el componente previo
+import AvailableTimes from './AvailableTimes';
 import { useNavigate } from 'react-router-dom';
 
 function ReservationForm() {
@@ -82,7 +82,7 @@ function ReservationForm() {
 
       <form aria-labelledby="reservation-form"
         onSubmit={formik.handleSubmit} 
-        style={{ display: 'grid',  gap: '15px', margin: '20px;' }}
+        style={{ display: 'grid',  gap: '15px', margin: '20px' }}
       >
         <label htmlFor="date">Choose date</label>
         <input
@@ -139,7 +139,7 @@ function ReservationForm() {
           <option>Anniversary</option>
         </select>
 
-        <input type="submit" value="Make Your Reservation" aria-label="Submit reservation form" />
+        <input type="submit" value="Make Your Reservation" role="button" aria-label="Submit reservation form" />
       </form>
 
       {confirmation && (
