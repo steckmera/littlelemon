@@ -1,0 +1,92 @@
+.home-container {
+  padding: 30px;
+  font-family: 'Georgia', serif;
+  background-color: #fffdf4;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #495E57;
+  color: #edefee;
+  border-radius: 10px;
+  padding: 40px;
+  gap: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero-text {
+  flex: 1 1 300px;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  color: #F4CE14;
+}
+
+.hero-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.reserve-btn {
+  background-color: #F4CE14;
+  color: #333;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.reserve-btn:hover {
+  background-color: #ee9972;
+  color: white;
+}
+
+.hero-image img {
+  width: 300px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.cards-section {
+  margin-top: 60px;
+}
+
+.cards-section h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.card-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  width: 340px;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}

@@ -75,16 +75,22 @@ function ReservationForm() {
   };
 
   return (
-    <div>
-      <form
-        onSubmit={formik.handleSubmit}
-        style={{ display: 'grid', maxWidth: '300px', gap: '15px' }}
+    <>
+      <h2>Make a Reservation</h2>
+      <p>Please fill out the form below to make a reservation.</p>
+
+
+      <form aria-labelledby="reservation-form"
+        onSubmit={formik.handleSubmit} 
+        style={{ display: 'grid',  gap: '15px', margin: '20px;' }}
       >
         <label htmlFor="date">Choose date</label>
         <input
           type="date"
           id="date"
           name="date"
+          aria-required="true"
+          aria-invalid={formik.errors.dateReserva ? "true" : "false"}
           value={formik.values.date}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -111,6 +117,7 @@ function ReservationForm() {
           value={formik.values.guests}
           min="1"
           max="10"
+          aria-required="true"
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
           style={formik.touched.guests && formik.errors.guests ? errorStyle : {}}
@@ -123,6 +130,7 @@ function ReservationForm() {
         <select
           id="occasion"
           name="occasion"
+          aria-required="true"
           value={formik.values.occasion}
           onChange={formik.handleChange}
           onBlur={formik.handleBlur}
@@ -131,7 +139,7 @@ function ReservationForm() {
           <option>Anniversary</option>
         </select>
 
-        <input type="submit" value="Make Your Reservation" aria-label="On Click" />
+        <input type="submit" value="Make Your Reservation" aria-label="Submit reservation form" />
       </form>
 
       {confirmation && (
@@ -139,7 +147,7 @@ function ReservationForm() {
           {confirmation}
         </p>
       )}
-    </div>
+    </>
   );
 }
 

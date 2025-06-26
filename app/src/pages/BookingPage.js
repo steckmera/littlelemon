@@ -2,8 +2,10 @@ import BookingForm from "../components/BookingForm"
 
 
 function BookingPage() {
-  return (
+  return (    
+    <div className="booking-page">
     <BookingForm/>
+    </div>
     );
 };
 

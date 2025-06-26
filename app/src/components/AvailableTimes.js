@@ -46,6 +46,7 @@ function AvailableTimes({ date, onSelect }) {
       <select
         id="time"
         name="time"
+        aria-required="true"
         onChange={(e) => onSelect(e.target.value)}
         disabled={loading || times.length === 0}
       >
